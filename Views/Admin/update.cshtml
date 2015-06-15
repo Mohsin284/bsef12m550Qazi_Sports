@@ -1,0 +1,54 @@
+﻿@using MVC.Models
+@model  MVC.Models.Customer
+@{
+    ViewBag.Title = "update";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet">
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+</head>
+<body >
+    &nbsp;
+    <div style="margin-left: 100px ; color:blueviolet" >
+        @using (Html.BeginForm("UpdateCustomer", "Admin", FormMethod.Post))
+        {
+
+            @Html.HiddenFor(m => Model.Id)
+            <br><br>
+    <p style="color:black">Name</p>
+            @Html.EditorFor(m => Model.Name)
+            <br><br>
+    <p style="color:black">Email</p>
+            @Html.EditorFor(m => Model.Email  )
+            <br><br>
+    <p style ="color:black">Password</p>
+            @Html.EditorFor(m => Model.Password)
+            <br><br>
+    <p style="color:black">Year</p>
+            @Html.EditorFor(m => Model.Year)
+            <br><br>
+    <p style="color:black">Note</p>
+            @Html.EditorFor(m => Model.Note)
+            <br><br>
+    <p style="color:black">Gender</p>
+            @Html.EditorFor(m => Model.Gender)
+            <br><br>
+    <p style="color:black">Address</p>
+            @Html.EditorFor(m => Model.Address)
+            <br><br>
+    <p style="color:black">Country</p>
+            @Html.EditorFor(m => Model.Country)
+            <br><br>
+            <input type="submit" value="Submit" />
+        }
+    </div>
+</body>
+</html>

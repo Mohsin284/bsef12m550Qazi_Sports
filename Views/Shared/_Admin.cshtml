@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet">
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="background: url('../../images/bg.jpg') center">
+    <div class="container-fluid">
+        <nav class="navbar navbar-inverse" style="background-color:mediumpurple" role="navigation">
+            <div class="navbar-brand">
+                <a class="navbar-text" href="#"> </a>
+
+                <img src="~/Controllers/images/crick_logo%20(1).jpg" alt="Qazi Sport" style="width:100px; height:50px">
+
+            </div>
+
+            <h4 style="color:bisque">Qazi Sports</h4>
+            <ul class="nav navbar-nav pull-left list-inline > li">
+
+                <li><a style="color:gold" href="~/Home/Index">Home</a></li>
+                <li><a style="color:gold" href="~/Products/Products/1">Products</a></li>
+                <li><a style="color:gold" href="~/User/SignUp">Register</a></li>
+                <li><a style="color:gold" href="~/User/SignIn">Sign in</a></li>
+                <li><a style="color:gold" href="~/Home/Contact">Contact</a></li>
+
+                <li><a style="color:gold" href="~Home/Cart">Cart</a></li>
+
+            </ul>
+
+
+        </nav>
+
+        <div class='container-fluid master'>
+            <div class='row'>
+
+                <div class='col-lg-2  menu' style="border:dashed">
+                    <div id='menyen'>
+                        <h4 style="color: Red">Product Administration</h4>
+                            <a href="~/Admin/Creat" style="font-size:16px">Add Product</a><br>
+                            <a href="/Admin/updateI" style="font-size:16px">Udpate Product</a><br>
+                            <a href="/Admin/UpdateItem" style="font-size:16px">Delete Product</a><br>
+                            <a href="/Admin/viewItem" style="font-size:16px">View Product</a><br>
+                        <br><h4 style="color: Red">Customer Administration</h4>
+                        <a href="~/User/SignUp" style="font-size:16px">Add Customer</a><br>
+                        <a href="~/Admin/viewProduct" style="font-size:16px">Udpate Customer</a><br>
+                        <a href="/Admin/viewProduct" style="font-size:16px">Delete Customer</a><br>
+                        <a href="/Admin/viewProduct" style="font-size:16px">View Customer</a><br>
+                        <form action="">
+                            <input >
+                            </form>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-offset-2">
+
+                </div>
+            </div>
+        </div>
+
+
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+    </div>
+    @RenderBody()
+</body>
+</html>

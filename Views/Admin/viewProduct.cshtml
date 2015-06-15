@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "viewProduct";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+@using MVC.Models;
+<h1>      </h1>
+<h2>All Customers</h2>
+
+<div class="col-lg-12" >
+    <table border="1"  style="margin-top:5%; width:70%; line-height:22PX;">
+
+        <tr><th><h5>Customer Id</h5></th><th><h5>Name</h5></th><th><h5>EMAIL</h5></th><th><h5>DELETE</h5></th><th><h5>UPDATE</h5></th></tr>
+
+        @foreach (Customer c in Model)
+        {
+            <tr>
+                <td><h5>@c.Id</h5></td>
+                <td><h6>@c.Name</h6></td>
+                <td>@c.Email</td>
+                <td>
+                    <a href="~/Admin/delete/@c.Id">Delete</a>
+                    </td>
+                <td>
+                    <a href="~/Admin/update/@c.Id">Update</a>
+                </td>
+            </tr>
+        }
+
+
+    </table>
+
+</div>

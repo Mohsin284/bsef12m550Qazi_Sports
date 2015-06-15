@@ -1,0 +1,96 @@
+﻿@Model MVC.Models.HOCKEY
+@using MVC.Models
+
+@*@{
+        ViewBag.Title = "Cricket";
+    }
+
+    <h2>Cricket</h2>*@
+
+@{
+    Database1Entities1 ctx = new Database1Entities1();
+    IEnumerable<Item> list = ctx.Items.Where(x => x.Type == "hockey").Select(x => x);
+    List<Item> myList = list.ToList();
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet">
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body style="background: url('../../images/bg.jpg') center">
+
+    <div id='topnavDIV' class='topnavContainer'>
+        <div class='container-fluid' style='max-width:1600px;margin-left:0px;padding-left:0;'>
+            <ul class='nav nav-pills topnav'>
+                <li>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <li><a href='~/Products/Cricket/1' style="font-family:Algerian; font:xx-large">Cricket</a></li>
+                <li><a href='~/Products/Football/1' style="font-family:Algerian; font:xx-large">Football</a></li>
+                <li><a href='~/Products/Volley_ball/1' style="font-family:Algerian; font:xx-large">Volley ball</a></li>
+                <li><a href='~/Products/HOCKEY/1' style="font-family:Algerian; font:xx-large">Hockey</a></li>
+                <li><a href='~/Products/Squash/1' style="font-family:Algerian; font:xx-large">Squash</a></li>
+                <li><a href='~/Products/Rugby/1' style="font-family:Algerian; font:xx-large">Rugby</a></li>
+
+
+            </ul>
+        </div>
+    </div>
+    <br><br>
+    <div class='container-fluid master'>
+        <div class='row'>
+
+            <div class="col-lg-offset-2">
+                <article class="grid_12 pull-right">
+                    <h3>Our hockey Items</h3>
+
+                    <table class="Responsive-table">
+                        @{
+
+                            for (int i = 0, k = 0; i < 4; i++)
+                            {
+                            <tr>
+                                @for (int j = 1; j < 5; j++, k++)
+                                    {
+
+
+                                    <td>
+
+
+
+                                        <p style="margin-left: 70px;">@myList[j].Name</p>
+                                        <a href="~/Products/ProductInfo/@myList[k].Id">
+
+
+
+                                            <img src="~/images/img_hockey_(@(k+33)).jpg" style="margin-bottom: 35px; float: left;  margin-right: 35px; height: 220px; width: 200px;" />
+
+                                        </a>
+                                        <p style="margin-left: 70px;"><b>Pkr</b>@myList[k].Price</p><br>
+
+                                    </td>
+                                    }
+
+
+                            </tr>
+                            }
+                        }
+                    </table>
+
+                </article>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+
+
+
+
+</html>

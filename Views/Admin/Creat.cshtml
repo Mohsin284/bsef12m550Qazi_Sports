@@ -1,0 +1,114 @@
+﻿@{
+    ViewBag.Title = "Creat";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet">
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body style="background: url('../../images/bg.jpg') center">
+
+    <div>
+        <h3 style="margin-left:200px; font-weight:500 ">Creat Item</h3>
+        <hr style="margin-left:200px; width:900px" />
+    </div>
+
+
+    <div>
+        <form action="~/Admin/Creat1" class="form-horizontal" role="form" method="post">
+
+            <div class="form-group">
+                <label class="control-label col-lg-3" for="name">Name: </label>
+                <div class="col-lg-4">
+                    <input type="text" class="form-control" name="name" id="UserName" placeholder="Enter Name" />
+                    <input type="button" id="b1" value="Check" />
+                    <br /><div id="result"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-lg-3" for="Description">Description:</label>
+                <div class="col-lg-4">
+                    <input type="text" class="form-control" name="Description" placeholder="Enter Description" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-lg-3" for="Color">Color:</label>
+                <div class="col-lg-4">
+                    <input type="color" class="form-control" name="Color" placeholder="Enter Color" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-lg-3" for="Price">Price:</label>
+                <div class="col-lg-4">
+                    <input type="text" class="form-control" name="Price" placeholder="Enter Price" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-lg-3" for="Size">Size: </label>
+                <div class="col-lg-4">
+                    <input type="text" class="form-control" name="Size" placeholder="Enter Size" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-lg-3" for="Type">Type:</label>
+                <div class="col-lg-1">
+                    <label class="control-label col-lg-10" for="Type">cricket:</label>
+                    <input style="margin-top:10px" type="radio" class="btn btn-primary" value="cricket" name="Type" />
+                </div>
+                <div class="col-lg-3">
+                    <label class="control-label col-lg-3" for="Type">hockey:</label>
+                    <input style="margin-top:10px" type="radio" class="btn btn-primary" value="hockey" name=" type" />
+                </div>
+                <div class="col-lg-3">
+                    <label class="control-label col-lg-3" for="Type">football:</label>
+                    <input style="margin-top:10px" type="radio" class="btn btn-primary" name="Type" />
+                </div>
+                <div class="col-lg-3">
+                    <label class="control-label col-lg-3" for="Type">squash:</label>
+                    <input style="margin-top:10px" type="radio" class="btn btn-primary" name="Type" />
+                </div>
+                <div class="col-lg-3">
+                    <label class="control-label col-lg-3" for="Type">rugby:</label>
+                    <input style="margin-top:10px" type="radio" class="btn btn-primary" name="Type" />
+                </div>
+                <div class="col-lg-3">
+                    <label class="control-label col-lg-3" for="Type">volleyball:</label>
+                    <input style="margin-top:10px" type="radio" class="btn btn-primary" name="Type" />
+                </div>
+                <div class="col-lg-3">
+                    <label class="control-label col-lg-3" for="Type">other:</label>
+                    <input style="margin-top:10px" type="radio" class="btn btn-primary" name="Type" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-lg-3 control-label">Status: </label>
+                <div class="col-lg-3">
+                    <select class="from-control input-sm" name="Status">
+                        <option>-Select-</option>
+                        <option>Available</option>
+                        <option>sold</option>
+                        
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-lg-offset-3 col-lg-10">
+                    <input type="submit" value="Submit" class="btn btn-default" />
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
