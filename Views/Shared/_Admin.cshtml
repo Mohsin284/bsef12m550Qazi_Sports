@@ -43,17 +43,20 @@
                     <div id='menyen'>
                         <h4 style="color: Red">Product Administration</h4>
                             <a href="~/Admin/Creat" style="font-size:16px">Add Product</a><br>
-                            <a href="/Admin/updateI" style="font-size:16px">Udpate Product</a><br>
-                            <a href="/Admin/UpdateItem" style="font-size:16px">Delete Product</a><br>
-                            <a href="/Admin/viewItem" style="font-size:16px">View Product</a><br>
+                            <a href="~/Admin/viewItem" style="font-size:16px">Udpate Product</a><br>
+                            <a href="~/Admin/viewItem" style="font-size:16px">Delete Product</a><br>
+                            <a href="~/Admin/viewItem" style="font-size:16px">View Product</a><br>
                         <br><h4 style="color: Red">Customer Administration</h4>
                         <a href="~/User/SignUp" style="font-size:16px">Add Customer</a><br>
                         <a href="~/Admin/viewProduct" style="font-size:16px">Udpate Customer</a><br>
                         <a href="/Admin/viewProduct" style="font-size:16px">Delete Customer</a><br>
                         <a href="/Admin/viewProduct" style="font-size:16px">View Customer</a><br>
-                        <form action="">
-                            <input >
-                            </form>
+                        <div class="col-lg-4">
+                        <form action="~/Admin/Search">
+                            <input type="text" name="search" id="ser" placeholder="Search Customer">
+                            <input type="submit" class="btn btn-default" value="Go" >
+                        </form>
+                            </div>
 
 
                     </div>
